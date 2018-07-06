@@ -1,0 +1,14 @@
+<launch>
+
+    <param name="robot_description" textfile="$(find floating_joint_test)/urdf/test_setup.urdf" />
+    <param name="robot_description_semantic" textfile="$(find floating_joint_test)/urdf/test_setup.urdf" />
+
+    <node name="world_to_link_A_tf_publisher" pkg="tf" type="static_transform_publisher" args="2 0 0 0 0 0 world link_A 100"/>
+    <node name="world_to_link_B_tf_publisher" pkg="tf" type="static_transform_publisher" args="2 0 0 0 0 0 world link_B 100"/>
+
+    <node name="planning_scene_user" pkg="floating_joint_test" type="planning_scene_user_node" output="screen"/>
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+    <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find floating_joint_test)/visualization.rviz" required="true" /> -->
+</launch>

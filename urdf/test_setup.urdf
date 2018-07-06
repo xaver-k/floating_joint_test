@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<robot name="floating_joints_test">
+
+    <link name="world" />
+    <link name="link_A" />
+    <link name="link_B" />
+
+    <!-- This joint is NOT handled correctly. -->
+    <joint name="world_to_link_A" type="floating">
+      <child link="link_A"/>
+      <parent link="world"/>
+      <origin xyz="1 0 0" rpy="0 0 0" />  <!-- some abritrary values that are != Identity-->
+    </joint>
+
+    <!-- This joint is handled correctly. -->
+    <joint name="world_to_link_B" type="floating">
+      <child link="link_B"/>
+      <parent link="world"/>
+      <!-- joint origin omitted -> defaults to identity -->
+    </joint>
+
+</robot>

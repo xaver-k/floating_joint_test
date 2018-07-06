@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<robot name="floating_joints_test">
+
+  <passive_joint name="world_to_link_A" />
+  <passive_joint name="world_to_link_B" />
+
+</robot>
