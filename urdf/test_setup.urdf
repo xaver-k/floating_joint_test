@@ -10,7 +10,7 @@
     <joint name="world_to_link_A" type="floating">
       <child link="link_A"/>
       <parent link="world"/>
-      <origin xyz="1 0 0" rpy="0 0 0" />  <!-- some abritrary values that are != Identity-->
+      <origin xyz="1 0 0" rpy="1.570796 0 0" />  <!-- some abritrary values that are != Identity-->
     </joint>
 
     <!-- This joint is handled correctly. -->
